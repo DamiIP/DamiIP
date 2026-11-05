@@ -4,677 +4,236 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>大米老师｜敢敢做IP</title>
-    <meta
-      name="description"
-      content="帮助有经验的女老板，把经验变成内容，把内容变成信任。领取老板IP起号懒人包，了解Preview Class。"
-    />
+    <meta name="description" content="帮助有经验的女老板，用 AI 与短视频把经验变成内容，把内容变成客户。免费参加老板IP Preview Class。" />
     <meta name="theme-color" content="#7A2E35" />
 
-    <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://damiip.github.io/DamiIP/" />
     <meta property="og:title" content="大米老师｜敢敢做IP" />
-    <meta
-      property="og:description"
-      content="帮助有经验的女老板，把经验变成内容，把内容变成信任。领取老板IP起号懒人包，了解Preview Class。"
-    />
-    <meta
-      property="og:image"
-      content="https://damiip.github.io/DamiIP/assets/portrait.jpeg"
-    />
-
-    <!-- Twitter Card -->
+    <meta property="og:description" content="帮助有经验的女老板，把经验变成内容，把内容变成客户。免费参加 Preview Class。" />
+    <meta property="og:image" content="https://damiip.github.io/DamiIP/assets/portrait.jpeg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://damiip.github.io/DamiIP/" />
-    <meta name="twitter:title" content="大米老师｜敢敢做IP" />
-    <meta
-      name="twitter:description"
-      content="帮助有经验的女老板，把经验变成内容，把内容变成信任。领取老板IP起号懒人包，了解Preview Class。"
-    />
-    <meta
-      name="twitter:image"
-      content="https://damiip.github.io/DamiIP/assets/portrait.jpeg"
-    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500&family=Noto+Serif+SC:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
-
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet" />
     <link rel="icon" href="assets/favicon.svg" />
     <link rel="stylesheet" href="style.css" />
-    <script>
-      // Progressive enhancement: add .js class early
-      document.documentElement.classList.add('js');
-    </script>
   </head>
   <body>
-    <header>
-      <a class="brand" href="#">大米老师 <i>Dami</i></a>
-      <nav aria-label="主导航">
-        <a href="#">首页</a>
-        <a href="#story">关于我</a>
-        <a href="#method">课程介绍</a>
-        <a href="#gift">免费资源</a>
-        <a href="#registration">联系我</a>
-        <a class="navcta" href="#preview">参加 Preview Class</a>
-      </nav>
+    <header class="header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#top">大米老师 <i>Dami</i></a>
+        <nav class="nav" aria-label="主导航">
+          <a href="#story">关于我</a>
+          <a href="#method">方法</a>
+          <a href="#preview">Preview Class</a>
+          <a href="#faq">常见问题</a>
+        </nav>
+        <a class="btn btn-small" href="#preview">免费参加</a>
+      </div>
     </header>
 
-    <main>
-      <!-- Refined Calm & High-End Hero -->
-      <section id="hero" class="hero coverhero">
-        <div class="hero-primary-flow">
-          <div class="coverheading">
-            <p class="eyebrow">FOR WOMEN WHO MEAN BUSINESS · 给有经验的女老板</p>
-            <h1>
-              <span class="line line-1">你不是没有经验。</span>
-              <span class="line line-2">你只是还没让对的人，</span>
-              <span class="line line-3"><strong><em class="glow-word">看见</em>你的价值。</strong></span>
-            </h1>
-            <p class="coverscript">Build Influence. <span>Grow Your Business.</span></p>
-          </div>
-
-          <div class="heroimage-wrapper">
-            <div class="heroportal-glow" aria-hidden="true"></div>
-            <div class="heroimage arch-frame">
-              <img
-                src="assets/portrait.jpeg"
-                alt="大米老师在暖光中的自信肖像"
-                fetchpriority="high"
-              />
-              <div class="photo-nametag">
-                <strong>大米老师 <i>Dami</i></strong>
-                <span>AI + IP 获客教练</span>
-              </div>
+    <main id="top">
+      <!-- 1. Hero -->
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div class="hero-text">
+            <p class="eyebrow">给有经验的女老板</p>
+            <h1>你不是没有经验，<br />只是还没让对的人<em>看见</em>。</h1>
+            <p class="lead">用 AI 与短视频，把多年经验变成客户愿意相信的内容。</p>
+            <div class="hero-actions">
+              <a class="btn" href="#preview">免费参加 Preview Class</a>
+              <a class="link" href="#story">认识大米老师 →</a>
             </div>
+            <p class="tags">不用当网红 · 不懂 AI 也能学</p>
           </div>
-
-          <div class="herocalltoaction">
-            <a class="button gold hero-primary-btn" href="#preview">
-              <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-              </svg>
-              免费参加 Preview Class
-            </a>
-            <a class="story-link" href="#story">了解我的故事 →</a>
-          </div>
+          <figure class="hero-photo">
+            <img src="assets/portrait.jpeg" alt="大米老师肖像" fetchpriority="high" width="853" height="1280" />
+            <figcaption><strong>大米老师</strong><span>AI + IP 获客教练</span></figcaption>
+          </figure>
+        </div>
+        <div class="wrap">
+          <ul class="stats">
+            <li><strong>10年+</strong><span>直播与团队经验</span></li>
+            <li><strong>2000万+</strong><span>年度销售业绩</span></li>
+            <li><strong>200+</strong><span>学员成为直播获客达人</span></li>
+          </ul>
         </div>
       </section>
 
-      <!-- Horizontal Stat Strip with Simple Inline SVG Line Icons -->
-      <section class="statstrip-section reveal-item" id="stats">
-        <div class="statstrip">
-          <div class="stat-item">
-            <svg class="stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-              <line x1="16" y1="2" x2="16" y2="6"></line>
-              <line x1="8" y1="2" x2="8" y2="6"></line>
-              <line x1="3" y1="10" x2="21" y2="10"></line>
-            </svg>
-            <div class="stat-number">
-              <span class="counter" data-target="10">10</span><span class="stat-unit">年+</span>
-            </div>
-            <div class="stat-label">直播与团队经验</div>
-          </div>
-          <div class="stat-item">
-            <svg class="stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-              <polyline points="17 6 23 6 23 12"></polyline>
-            </svg>
-            <div class="stat-number">
-              <span class="counter" data-target="2000">2000</span><span class="stat-unit">万+</span>
-            </div>
-            <div class="stat-label">年度销售业绩</div>
-          </div>
-          <div class="stat-item">
-            <svg class="stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-              <circle cx="9" cy="7" r="4"></circle>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-            </svg>
-            <div class="stat-number">
-              <span class="stat-prefix">培养 </span><span class="counter" data-target="200">200</span><span class="stat-unit">+</span>
-            </div>
-            <div class="stat-label">成为直播获客的达人</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Partner / Feature Logo Strip (Slim Row) -->
-      <section class="logostrip-section reveal-item" aria-label="曾合作与分享品牌">
-        <div class="logostrip-container">
-          <span class="logostrip-label">曾合作 / 曾分享于</span>
-          <div class="logostrip-grid">
-            <!-- Logo slot 1: replace with <img> -->
-            <div class="logo-slot" data-slot="1">
-              <span>LOGO 1</span>
-            </div>
-            <!-- Logo slot 2: replace with <img> -->
-            <div class="logo-slot" data-slot="2">
-              <span>LOGO 2</span>
-            </div>
-            <!-- Logo slot 3: replace with <img> -->
-            <div class="logo-slot" data-slot="3">
-              <span>LOGO 3</span>
-            </div>
-            <!-- Logo slot 4: replace with <img> -->
-            <div class="logo-slot" data-slot="4">
-              <span>LOGO 4</span>
-            </div>
-            <!-- Logo slot 5: replace with <img> -->
-            <div class="logo-slot" data-slot="5">
-              <span>LOGO 5</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Subhero: Quote & Introduction -->
-      <section class="subhero-section reveal-item">
-        <div class="subhero-container">
-          <blockquote class="subhero-quote">
-            <svg class="quotemark-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M3 21c3 0 7-1 7-8V5c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v6c0 4 1 8 5 10"></path>
-              <path d="M15 21c3 0 7-1 7-8V5c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v6c0 4 1 8 5 10"></path>
-            </svg>
-            <p>
-              经验，是你的底气。<br />
-              <strong>影响力，让它被看见。</strong>
-            </p>
-          </blockquote>
-
-          <div class="coverintroduction">
-            <p>
-              我是大米老师。<br />
-              从直播、带团队、做成交，到重新学习 AI 与短视频，我陪有经验的女老板，把多年积累，整理成客户看得懂、愿意相信的内容。
-            </p>
-            <p class="quiet">不用当网红 · 从你的经验开始 · 不懂 AI 也能学</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Pain Points -->
-      <section class="pain section reveal-item">
-        <p class="eyebrow">你已经很努力了</p>
-        <h2>
-          只是，有些努力<br />
-          还没有变成客户。
-        </h2>
-        <div class="painlist">
-          <article class="reveal-child">
-            <span>01</span>
-            <h3>有人看，却没人问。</h3>
-            <p>视频拍了不少，客户却没有因此更了解你。</p>
-          </article>
-          <article class="reveal-child">
-            <span>02</span>
-            <h3>很有经验，却不知道讲什么。</h3>
-            <p>做了十几年生意，反而不知道从哪里开始说。</p>
-          </article>
-          <article class="reveal-child">
-            <span>03</span>
-            <h3>工具越来越多，时间越来越少。</h3>
-            <p>学了 AI、剪辑、短视频，还是每天烦恼今天拍什么。</p>
-          </article>
-        </div>
-        <p class="closingline highlight">
-          你不是没有料。<strong>你的经验，需要被说清楚。</strong>
-        </p>
-        <a class="textlink" href="#method">看看我们怎样开始</a>
-      </section>
-
-      <!-- Wine Quote Section -->
-      <section class="quote wine reveal-item">
-        <p class="eyebrow">大米老师的坚持</p>
-        <h2>
-          我教的不是怎样当网红。<br />
-          我教你，把<span>经验</span>变成<span>影响力</span>，<br />
-          把影响力变成<span>客户</span>。
-        </h2>
-      </section>
-
-      <!-- Story Section -->
-      <section id="story" class="story section reveal-item">
-        <div class="storyimage">
-          <img
-            src="assets/story.jpeg"
-            alt="大米老师暖光侧面肖像"
-            loading="lazy"
-          />
-          <div class="storycaption">
-            <span>重新开始，</span>
-            <strong>也是一种底气。</strong>
-          </div>
-        </div>
-        <div>
-          <p class="eyebrow">我的故事，也是很多老板的故事</p>
-          <h2>
-            做了这么多年，<br />
-            为什么还要<span class="storyaccent">重新开始？</span>
-          </h2>
-          <p class="storyopening">
-            当过去有效的方法，不再像以前有效，<br />
-            有经验的老板，也会站在新的起点。
-          </p>
-          <div class="timeline">
-            <article class="reveal-child">
-              <small>2018 · 从零开始</small>
-              <h3>我先做生意，才学会被看见。</h3>
-              <p>
-                从 Facebook 直播开始，把产品讲清楚，把客户的信任一点一点累积起来。我的 IP，不是从一张漂亮的简介开始，而是从真实的生意开始。
-              </p>
-              <p class="storytakeaway">你有的，不只是经验。是一路做出来的底气。</p>
+      <!-- 2. Pain points -->
+      <section class="section">
+        <div class="wrap">
+          <h2 class="center">很努力，却还没有变成客户？</h2>
+          <div class="cards three">
+            <article class="card">
+              <h3>有人看，没人问</h3>
+              <p>视频拍了不少，客户还是不了解你。</p>
             </article>
-            <article class="reveal-child">
-              <small>直播 × 内容 × 私域 × 团队</small>
-              <h3>走过成交，也走过带团队的路。</h3>
-              <p>
-                内容背后，是客户、产品和团队。真正让我在意的，从来不只是有人看，而是这份信任，能不能成为生意里的连接。
-              </p>
-              <p class="storytakeaway">被看见很重要。被相信，更重要。</p>
+            <article class="card">
+              <h3>有经验，不知道讲什么</h3>
+              <p>做了十几年生意，却不知从哪说起。</p>
             </article>
-            <article class="reveal-child">
-              <small>环境改变 · 再走一次</small>
-              <h3>以前做得到，不代表今天不用学。</h3>
-              <p>
-                当流量环境改变，我也需要重新学习 AI 与短视频。不是把过去全部推翻，而是找到新的表达方式，让积累多年的经验，继续被人看见。
-              </p>
-              <p class="storytakeaway">重新学习，不是承认自己不行。是让经验走得更远。</p>
-            </article>
-            <article class="reveal-child">
-              <small>今天 · 陪你开始</small>
-              <h3>所以，我懂你的起点。</h3>
-              <p>
-                你有产品、有专业、有经验，只是还没找到适合自己的表达方法。我把自己重新走过的路整理成步骤，陪你从一句定位、一条内容开始。
-              </p>
-              <p class="storytakeaway">不必成为另一个人。先让对的人，看懂你。</p>
+            <article class="card">
+              <h3>工具多，时间少</h3>
+              <p>学了 AI 和剪辑，还是不知道今天拍什么。</p>
             </article>
           </div>
-          <a class="button" href="#preview">和大米老师一起，迈出第一步</a>
+          <p class="note center">你不缺料，只是经验需要被说清楚。</p>
         </div>
       </section>
 
-      <!-- The Boss IP System (5 Steps) -->
-      <section id="method" class="method section reveal-item">
-        <p class="eyebrow">THE BOSS IP SYSTEM</p>
-        <h2>
-          老板IP，是一套系统。<br />
-          不是每天硬拍视频。
-        </h2>
-        <p class="lead">先找对方向，再让每一条内容，有它的作用。</p>
-        <div class="steps">
-          <article class="reveal-child">
-            <b>01</b>
-            <h3>定位</h3>
-            <p>
-              切入一个对的空白市场，<br />
-              让你的定位脱颖而出。
-            </p>
-          </article>
-          <article class="reveal-child">
-            <b>02</b>
-            <h3>内容</h3>
-            <p>
-              做出有你自己味道的内容，<br />
-              让大众一看就知道是你。
-            </p>
-          </article>
-          <article class="reveal-child">
-            <b>03</b>
-            <h3>AI</h3>
-            <p>
-              设计属于你的内容脚本，<br />
-              并制定与同行拉开差异化的策略。
-            </p>
-          </article>
-          <article class="reveal-child">
-            <b>04</b>
-            <h3>信任</h3>
-            <p>
-              用真实的经验与观点，<br />
-              让陌生人快速认同和信任你。
-            </p>
-          </article>
-          <article class="reveal-child">
-            <b>05</b>
-            <h3>转化</h3>
-            <p>
-              让对的人、<br />
-              有需求的人选择你。
-            </p>
-          </article>
-        </div>
-        <p class="methodend highlight">
-          流量不是终点，<span>让对的人来找你，才有意义。</span>
-        </p>
-      </section>
-
-      <!-- Why Dami Section -->
-      <section class="why section reveal-item">
-        <div>
-          <p class="eyebrow">为什么是大米老师</p>
-          <h2>
-            有底气，也有温度。<br />
-            懂生意，也懂你的不容易。
-          </h2>
-        </div>
-        <div class="reasons">
-          <article class="reveal-child">
-            <h3>从真实生意里走出来</h3>
-            <p>表达、产品、团队和成交，需要放在一起思考。</p>
-          </article>
-          <article class="reveal-child">
-            <h3>懂得重新开始的心情</h3>
-            <p>不是你不努力。有时只是过去的方法，需要换一种做法。</p>
-          </article>
-          <article class="reveal-child">
-            <h3>用 AI，帮你省下力气</h3>
-            <p>把时间留给客户与生意，让工具帮助你整理与表达。</p>
-          </article>
-          <article class="reveal-child">
-            <h3>从你已经拥有的价值开始</h3>
-            <p>你不需要成为另一个人。你需要让别人更清楚地认识你。</p>
-          </article>
+      <!-- 3. About -->
+      <section id="story" class="section soft">
+        <div class="wrap split">
+          <img class="split-photo" src="assets/story.jpeg" alt="大米老师侧面肖像" loading="lazy" />
+          <div>
+            <p class="eyebrow">关于我</p>
+            <h2>我先做生意，<br />才学会被看见。</h2>
+            <p>流量环境变了，我也重新学习 AI 与短视频。现在，我把走过的路整理成步骤，陪你从第一条内容开始。</p>
+            <ol class="timeline">
+              <li><b>2018</b>Facebook 直播起步</li>
+              <li><b>成长</b>直播、私域、带团队、做成交</li>
+              <li><b>转型</b>重新学习 AI 与短视频</li>
+              <li><b>今天</b>陪女老板打造个人 IP</li>
+            </ol>
+            <p class="small">Me Beauty &amp; Health Sdn Bhd 创办人</p>
+          </div>
         </div>
       </section>
 
-      <!-- Gift Section -->
-      <section id="gift" class="gift section reveal-item">
-        <div>
-          <p class="eyebrow">看完 PREVIEW CLASS · 课后赠礼</p>
-          <h2>
-            老板IP<br />
-            起号懒人包
-          </h2>
-          <p>
-            先听懂方法，再带走工具。<br />
-            看完 Preview Class 后，由助理发给你，帮助你把第一条内容写出来。
-          </p>
-          <ol>
-            <li>一句话 IP 定位公式</li>
-            <li>30 个老板可以直接拍的 Hook</li>
-            <li>5P 内容框架</li>
-            <li>AI 短视频脚本 Prompt</li>
-            <li>7 天内容排程表</li>
+      <!-- 4. Method -->
+      <section id="method" class="section">
+        <div class="wrap">
+          <p class="eyebrow center">老板 IP 系统</p>
+          <h2 class="center">一套系统，<br />不是每天硬拍视频。</h2>
+          <ol class="steps">
+            <li><span>01</span><h3>定位</h3><p>找到对的空白市场</p></li>
+            <li><span>02</span><h3>内容</h3><p>做出有你味道的内容</p></li>
+            <li><span>03</span><h3>AI</h3><p>用 AI 写脚本、拉开差异</p></li>
+            <li><span>04</span><h3>信任</h3><p>用真实经验建立信任</p></li>
+            <li><span>05</span><h3>转化</h3><p>让有需要的人选择你</p></li>
           </ol>
         </div>
-        <div class="afterclass">
-          <p class="eyebrow">先学方法 · 再用工具</p>
-          <h3>这份懒人包，留给认真听课的你。</h3>
-          <p>
-            先观看老板IP Preview Class。完成课程后，联系大米助理确认领取，带着课堂里的方法开始行动。
-          </p>
-          <a class="button" href="#preview">
-            <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-            </svg>
-            先看 Preview Class
-          </a>
-          <p class="formnote">懒人包由助理在课后发放，网站不提供提前下载。</p>
+      </section>
+
+      <!-- 5. Preview Class + gift -->
+      <section id="preview" class="section dark">
+        <div class="wrap split">
+          <div>
+            <p class="eyebrow">免费 Preview Class</p>
+            <h2>先上一堂，再决定。</h2>
+            <p>看懂方法，再决定适不适合你。</p>
+            <ul class="checks">
+              <li>为什么有人看，却没人问</li>
+              <li>找到你的老板 IP 定位</li>
+              <li>用 AI 把想法变成脚本</li>
+              <li>用内容一步步建立信任</li>
+              <li>从内容到咨询的下一步</li>
+            </ul>
+            <a class="btn btn-gold" href="https://wa.me/60102131439" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.17-1.5A9.9 9.9 0 1 0 12.04 2Zm5.77 13.9c-.24.68-1.4 1.3-1.95 1.38-.5.07-1.13.1-1.82-.12a16.7 16.7 0 0 1-1.65-.61c-2.9-1.25-4.8-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.26-.29.58-.36.77-.36h.55c.18 0 .42-.07.65.5.24.58.82 2 .89 2.15.07.15.12.32.02.51-.1.2-.14.31-.29.48-.14.17-.3.38-.43.5-.14.15-.3.3-.13.6.17.29.75 1.24 1.62 2 1.1.99 2.04 1.3 2.33 1.44.29.15.46.12.63-.07.17-.2.73-.85.92-1.14.2-.29.39-.24.65-.14.27.1 1.68.8 1.97.94.29.15.48.22.55.34.07.12.07.7-.17 1.38Z"/></svg>
+              WhatsApp 报名下一场
+            </a>
+            <p class="small muted-light">联系阿珍 · +60 10 213 1439　录播视频即将上线</p>
+          </div>
+          <aside id="gift" class="gift">
+            <p class="eyebrow">课后赠礼</p>
+            <h3>老板 IP 起号懒人包</h3>
+            <ol>
+              <li>一句话 IP 定位公式</li>
+              <li>30 个老板可直接拍的 Hook</li>
+              <li>5P 内容框架</li>
+              <li>AI 短视频脚本 Prompt</li>
+              <li>7 天内容排程表</li>
+            </ol>
+            <p class="small">上完 Preview Class 后，由<a href="https://wa.me/60143174319" target="_blank" rel="noopener noreferrer">大米助理</a>发送给你。</p>
+          </aside>
         </div>
       </section>
 
-      <!-- Preview Class Section -->
-      <section id="preview" class="preview wine section reveal-item">
-        <div>
-          <p class="eyebrow">老板IP PREVIEW CLASS</p>
-          <h2>
-            先来上一堂，<br />
-            <span>再决定。</span>
-          </h2>
-          <p>
-            你的经验值得认真对待。<br />
-            先看懂这套方法，再决定是不是适合你。
-          </p>
-          <a
-            class="button gold"
-            href="https://wa.me/60102131439"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-            </svg>
-            我要参加下一场 Preview Class
-          </a>
-          <p class="quiet highlight">先听懂，再决定适不适合你。</p>
-        </div>
-        <div class="classcontent">
-          <div class="videoawait">
-            <span>PREVIEW CLASS · 录播课堂</span>
-            <h3>先听懂，再开始。</h3>
-            <p>录播视频即将上线。目前可以联系阿珍预约课程。</p>
-          </div>
-          <h3>这一堂，我们一起看懂</h3>
-          <ul>
-            <li>为什么有人看，却没有人来问？</li>
-            <li>怎样找到适合你的老板IP定位？</li>
-            <li>怎样用 AI，把想法变成视频脚本？</li>
-            <li>内容如何一步步建立信任？</li>
-            <li>如何设计从内容到咨询的下一步？</li>
-          </ul>
-          <p>从定位到脚本，以具体步骤带你理解，不让你面对一堆工具自己摸索。</p>
-          <div class="afterwatch">
-            <h3>听完之后，你可以这样开始</h3>
-            <a
-              class="button gold"
-              href="https://wa.me/60102131439"
-              target="_blank"
-              rel="noopener noreferrer"
-              >咨询正式课程报名</a
-            >
-            <p>
-              课后懒人包由<a
-                href="https://wa.me/60143174319"
-                target="_blank"
-                rel="noopener noreferrer"
-                >大米助理</a
-              >确认发放。
-            </p>
-          </div>
-          <div id="registration" class="registration">
-            <strong>下一场开放通知</strong>
-            <p>
-              联系阿珍了解下一场日期与报名详情。<br />
-              <a
-                href="https://wa.me/60102131439"
-                target="_blank"
-                rel="noopener noreferrer"
-                >阿珍 · +60 10 213 1439</a
-              >
-            </p>
+      <!-- 6. Fit -->
+      <section class="section">
+        <div class="wrap">
+          <h2 class="center">适合你吗？</h2>
+          <div class="cards two">
+            <article class="card">
+              <h3 class="yes">适合你，如果你</h3>
+              <ul class="plain">
+                <li>有产品、有专业、有经验</li>
+                <li>愿意从客户的问题出发</li>
+                <li>想建立长期的信任</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3 class="no">不适合，如果你</h3>
+              <ul class="plain">
+                <li>只想一夜爆红</li>
+                <li>期待保证成交</li>
+                <li>不打算投入时间练习</li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- Fit Section -->
-      <section class="fit section reveal-item">
-        <p class="eyebrow">不求适合每一个人</p>
-        <h2>
-          如果你已经有经验，<br />
-          这里，也许就是你的下一步。
-        </h2>
-        <div class="fitgrid">
-          <article class="reveal-child">
-            <h3>适合这样的你</h3>
-            <p>有产品、有专业、有真实经验。</p>
-            <p>愿意从客户的问题开始表达。</p>
-            <p>希望建立持续的内容与信任。</p>
-          </article>
-          <article class="reveal-child">
-            <h3>先想清楚，再开始</h3>
-            <p>如果你只想一夜爆红，或期待保证成交。</p>
-            <p>如果你希望完全不投入时间，就有结果。</p>
-            <p>这套方法需要练习、调整与执行。</p>
-          </article>
+      <!-- 7. FAQ -->
+      <section id="faq" class="section soft">
+        <div class="wrap narrow">
+          <h2 class="center">常见问题</h2>
+          <div class="faq">
+            <details>
+              <summary>不懂 AI，可以参加吗？</summary>
+              <p>可以。课堂会从具体示范开始，一步步带你看懂。</p>
+            </details>
+            <details>
+              <summary>一定要每天出镜吗？</summary>
+              <p>不用。按你的行业和时间来规划，出镜只是其中一种方式。</p>
+            </details>
+            <details>
+              <summary>参加 Preview 就要买正式课程吗？</summary>
+              <p>不用。听完再决定。</p>
+            </details>
+            <details>
+              <summary>会有人带着做吗？</summary>
+              <p>Preview 会示范步骤。正式课程的指导与答疑方式，以课程说明为准。</p>
+            </details>
+            <details>
+              <summary>一定可以获得客户吗？</summary>
+              <p>不保证。结果取决于行业、产品与执行，我们不承诺流量或成交。</p>
+            </details>
+          </div>
         </div>
       </section>
 
-      <!-- FAQ Section -->
-      <section class="faq section reveal-item">
-        <div>
-          <p class="eyebrow">你可能正在想</p>
-          <h2>
-            先把顾虑，<br />
-            说清楚。
-          </h2>
-          <img
-            src="assets/warmth.jpeg"
-            alt="大米老师身穿白色服装的温柔肖像"
-            loading="lazy"
-          />
+      <!-- 8. Final CTA -->
+      <section class="section final">
+        <div class="wrap narrow center">
+          <img class="avatar" src="assets/warmth.jpeg" alt="大米老师" loading="lazy" />
+          <h2>你的经验，值得被看见。</h2>
+          <a class="btn" href="#preview">免费参加 Preview Class</a>
+          <p class="small">想了解 <b>30 天老板 IP 执行系统</b>？价格与报名请联系 <a href="https://wa.me/60143174319" target="_blank" rel="noopener noreferrer">大米助理</a>。</p>
         </div>
-        <div>
-          <details open>
-            <summary>不懂 AI，可以参加吗？</summary>
-            <p>
-              可以。Preview Class
-              会从具体想法与脚本示范开始，帮助你看懂工具怎样协助表达。
-            </p>
-          </details>
-          <details>
-            <summary>一定要每天出镜吗？</summary>
-            <p>
-              先根据行业、客户和你能投入的时间规划内容。出镜只是其中一种表达方式。
-            </p>
-          </details>
-          <details>
-            <summary>参加 Preview 就要买正式课程吗？</summary>
-            <p>
-              不用。先了解方法，再决定是否继续。正式课程内容与报名详情会另行说明。
-            </p>
-          </details>
-          <details>
-            <summary>会有人带着做，还是只给我工具？</summary>
-            <p>
-              Preview
-              会讲解方法并示范步骤。正式课程的指导方式、答疑安排和执行支持，以公布的课程说明为准。
-            </p>
-          </details>
-          <details>
-            <summary>一定可以获得客户吗？</summary>
-            <p>
-              结果与行业、产品、投入及执行有关。我们重视真实表达与持续调整，不承诺流量或成交结果。
-            </p>
-          </details>
-        </div>
-      </section>
-
-      <!-- Final CTA Section -->
-      <section class="finalcta wine section reveal-item">
-        <p class="eyebrow">让你的经验，走得更远</p>
-        <h2>
-          你的经验，<br />
-          值得被更多人看见。
-        </h2>
-        <p>
-          做了十年、二十年的积累，<br />
-          可能正是别人正在寻找的答案。
-        </p>
-        <div class="actions">
-          <a class="button gold" href="#gift">
-            <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="20 12 20 22 4 22 4 12"></polyline>
-              <rect x="2" y="7" width="20" height="5"></rect>
-              <line x1="12" y1="22" x2="12" y2="7"></line>
-              <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
-              <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
-            </svg>
-            先看课后领取懒人包
-          </a>
-          <a class="button lightoutline" href="#preview">
-            <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-            </svg>
-            参加 Preview Class
-          </a>
-        </div>
-        <a class="courselink" href="#course">了解 30 天老板IP执行系统</a>
-        <details id="course">
-          <summary>30 天老板IP执行系统</summary>
-          <p>
-            从定位、内容规划到脚本与执行，建立自己的内容节奏。课程安排、价格与报名详情，请联系<a
-              href="https://wa.me/60143174319"
-              target="_blank"
-              rel="noopener noreferrer"
-              >大米助理 · +60 14 317 4319</a
-            >。
-          </p>
-        </details>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="footer-grid">
-        <!-- Column 1: Brand & One-line Mission -->
-        <div class="footer-col footer-brand-col">
-          <a class="brand" href="#">大米老师 <i>Dami</i></a>
-          <p class="footer-mission">把经验变成内容，把内容变成信任。</p>
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <div>
+          <a class="brand" href="#top">大米老师 <i>Dami</i></a>
+          <p>把经验变成内容，把内容变成信任。</p>
         </div>
-
-        <!-- Column 2: Quick Links to Page Sections -->
-        <div class="footer-col footer-nav-col">
-          <h4 class="footer-heading">快速导航</h4>
-          <nav class="footer-nav" aria-label="页脚导航">
-            <a href="#">首页</a>
-            <a href="#story">关于我</a>
-            <a href="#method">课程介绍</a>
-            <a href="#gift">免费资源</a>
-            <a href="#preview">Preview Class</a>
-            <a href="#registration">联系我们</a>
-          </nav>
-        </div>
-
-        <!-- Column 3: Contact & Company -->
-        <div class="footer-col footer-contact-col">
-          <h4 class="footer-heading">联系与咨询</h4>
-          <div class="footer-contact-links">
-            <a href="https://wa.me/60102131439" target="_blank" rel="noopener noreferrer">WhatsApp 阿珍 · +60 10 213 1439</a>
-            <a href="https://wa.me/60143174319" target="_blank" rel="noopener noreferrer">WhatsApp 大米助理 · +60 14 317 4319</a>
-          </div>
-          <p class="footer-company">Me Beauty &amp; Health Sdn Bhd</p>
+        <div class="footer-contact">
+          <a href="https://wa.me/60102131439" target="_blank" rel="noopener noreferrer">阿珍 · +60 10 213 1439</a>
+          <a href="https://wa.me/60143174319" target="_blank" rel="noopener noreferrer">大米助理 · +60 14 317 4319</a>
+          <span>Me Beauty &amp; Health Sdn Bhd</span>
         </div>
       </div>
-
-      <!-- Bottom Row -->
-      <div class="footer-bottom">
-        <small>© 2026 大米老师 · 所有内容仅供学习参考</small>
-      </div>
+      <p class="wrap copyright">© 2026 大米老师 · 所有内容仅供学习参考</p>
     </footer>
 
-    <!-- Improved Mobile Sticky Bar: Hidden initially; slides up after hero; hidden in preview -->
-    <div id="sticky-bar" class="sticky">
-      <a href="#preview" class="sticky-gold-btn">
-        <svg
-          class="whatsapp-icon"
-          viewBox="0 0 24 24"
-          width="20"
-          height="20"
-          fill="currentColor"
-          aria-hidden="true"
-        >
-          <path
-            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.886 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
-          />
-        </svg>
-        免费参加 Preview Class
-      </a>
-    </div>
-
-    <audio id="backgroundmusic" loop preload="none"></audio>
-    <button
-      id="musictoggle"
-      class="music-toggle"
-      type="button"
-      aria-pressed="false"
-      hidden
-    >
-      开启音乐
-    </button>
+    <a id="sticky" class="sticky" href="#preview">免费参加 Preview Class</a>
     <script src="app.js"></script>
   </body>
 </html>
