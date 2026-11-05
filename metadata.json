@@ -1,0 +1,8 @@
+{
+  "name": "大米老师｜敢敢做IP",
+  "description": "帮助有经验的女老板，把经验变成内容，把内容变成信任。领取老板IP起号懒人包，了解Preview Class。",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
