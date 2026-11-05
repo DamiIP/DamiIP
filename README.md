@@ -1,24 +1,12 @@
 # 大米老师｜敢敢做 IP
 
-基于 React + TypeScript + Vite 重构的高性能老板 IP 官网与课程咨询落地页。
+专为马来西亚有经验的女老板打造的老板 IP 官网与 Preview Class 咨询落地页。
 
-## 功能特性
-- **杂志风封面与排版**：还原《大米老师｜敢敢做IP》封面设计、金句排版与优雅色调。
-- **模块化结构**：
-  - 核心痛点诊断与经验定位
-  - 创业历程与故事时间轴 (Story & Timeline)
-  - 5步系统 (The Boss IP System: 定位、内容、AI、信任、转化)
-  - 课后赠礼：老板IP起号懒人包介绍
-  - Preview Class 录播课堂预约与通知
-  - 适合人群与先决条件判断 (Fit grid)
-  - 常见问题交互问答 (FAQ Accordion)
-  - 课后咨询与 30 天老板IP执行系统联系方式
-  - WhatsApp 一键直达咨询
-  - 课后懒人包与课堂报名悬浮快捷操作栏
-  - 背景音乐播放与控制系统
-- **现代化架构**：Vite + React 18 + TypeScript，无外部冗余依赖，极致轻量快速。
+## 技术栈与部署
+- **技术栈**：纯静态 HTML5 + CSS3 + 原生 Vanilla JavaScript，无外部框架依赖、无需构建步骤。
+- **GitHub Pages 部署**：直接上传根目录文件（`index.html`、`style.css`、`effects.css`、`cover.css`、`pattern.css`、`app.js` 及 `assets` 文件夹）至 GitHub 仓库根目录，并在仓库设置中开启 Pages（Deploy from branch `main` / `root`）。
 
-## 运行与构建
-- 开发服务：`npm run dev` (监听 3000 端口)
-- 生产打包：`npm run build`
-- 类型校验：`npm run lint`
+## 设计特性
+- **Mobile-First（375px 优先）**：专门针对来自 WhatsApp 和 Facebook 的手机访客深度优化，卡片、文字、间距与点击区域（Tap Targets）触手可及。
+- **经典色调**：酒红（Wine Red）、金（Gold）、暖米（Warm Cream）。
+- **无障碍与动效**：完整支持 `prefers-reduced-motion` 媒体查询，安全平滑。
