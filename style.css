@@ -256,7 +256,16 @@ h1 em {
 .nav a:hover { color: var(--wine); }
 
 /* Hero Entrance Sequence */
-.hero { padding: 40px 0 56px; position: relative; }
+.hero {
+  padding: 40px 0 56px;
+  position: relative;
+  background-image:
+    linear-gradient(rgba(245, 237, 225, 0.90), rgba(245, 237, 225, 0.95)),
+    url('/assets/hero-bg.jpg');
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .hero-grid { display: grid; gap: 36px; align-items: center; }
 
 .hero .eyebrow {
@@ -440,6 +449,33 @@ html.js-anim:not(.reduced-motion) .reveal-item.is-revealed {
 }
 .card p { color: var(--muted); margin-top: 6px; }
 
+/* Workspace Image Band (between pain cards and #story) */
+.workspace-band-section {
+  padding: 8px 0 24px;
+}
+.workspace-band {
+  margin: 0;
+  width: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(58, 48, 46, .05);
+  border: 1px solid var(--line);
+  background: var(--card);
+}
+.workspace-band img {
+  width: 100%;
+  height: clamp(140px, 22vw, 240px);
+  object-fit: cover;
+  object-position: center 48%;
+  display: block;
+  transition: transform 0.6s var(--ease-luxury);
+}
+@media (hover: hover) {
+  .workspace-band:hover img {
+    transform: scale(1.02);
+  }
+}
+
 /* 2. #story Photo Parallax (desktop only) */
 .split { display: grid; gap: 36px; align-items: center; }
 .split-photo {
@@ -480,14 +516,219 @@ html.js-anim:not(.reduced-motion) .reveal-item.is-revealed {
 .steps span { grid-row: span 2; font-family: var(--serif); color: var(--gold); font-size: 15px; }
 .steps p { color: var(--muted); font-size: 15px; }
 
-/* 3. #preview (wine red): Slow soft gold light drifting across background over ~12s */
+/* Interactive Quiz Section */
+.quiz-section {
+  background: var(--bg);
+  position: relative;
+  padding: 64px 0 72px;
+}
+.quiz-header {
+  margin-bottom: 28px;
+}
+.quiz-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(58, 48, 46, 0.05);
+  position: relative;
+}
+.quiz-progress-track {
+  width: 100%;
+  height: 4px;
+  background: rgba(169, 132, 74, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+.quiz-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 100%);
+  transition: width 0.35s var(--ease-luxury);
+}
+.quiz-card-inner {
+  padding: 28px 20px;
+}
+@media (min-width: 600px) {
+  .quiz-card-inner {
+    padding: 36px 36px 32px;
+  }
+}
+.quiz-step-meta {
+  margin-bottom: 12px;
+}
+.quiz-step-badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.quiz-question-title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 3.2vw, 24px);
+  color: var(--ink);
+  margin-bottom: 22px;
+  line-height: 1.4;
+}
+.quiz-options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.quiz-option-btn {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  width: 100%;
+  padding: 15px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #FFFDF9;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink);
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s var(--ease-luxury), box-shadow 0.2s var(--ease-luxury);
+  min-height: 52px;
+}
+.quiz-option-btn:hover {
+  border-color: var(--gold);
+  background: #FAF4EB;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(169, 132, 74, 0.12);
+}
+.quiz-option-btn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+.quiz-option-btn:active {
+  transform: translateY(0);
+}
+.quiz-option-letter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--soft-top);
+  color: var(--wine);
+  font-weight: 600;
+  font-size: 13px;
+  margin-top: 1px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.quiz-option-btn:hover .quiz-option-letter {
+  background: var(--wine);
+  color: #fff;
+}
+.quiz-option-text {
+  flex: 1;
+}
+
+/* Slide & Fade transitions for quiz */
+.step-fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.24s ease-out, transform 0.24s var(--ease-luxury);
+}
+.step-fade-out {
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.2s ease-in, transform 0.2s ease-in;
+}
+
+/* Result Diagnosis Pane */
+.quiz-result-pane {
+  text-align: center;
+  padding: 6px 0;
+}
+.quiz-result-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: rgba(169, 132, 74, 0.14);
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+}
+.quiz-result-title {
+  font-family: var(--serif);
+  font-size: clamp(24px, 4vw, 32px);
+  color: var(--wine);
+  margin-bottom: 16px;
+}
+.quiz-result-desc {
+  max-width: 500px;
+  margin: 0 auto 28px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+.quiz-result-desc p + p {
+  margin-top: 6px;
+}
+.quiz-result-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+}
+@media (min-width: 480px) {
+  .quiz-result-actions {
+    flex-direction: row;
+  }
+}
+.quiz-cta-btn {
+  margin-top: 0;
+  min-height: 48px;
+  padding: 0 24px;
+  font-size: 15px;
+}
+.quiz-reset-btn {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 14px;
+  padding: 0 20px;
+  min-height: 48px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+.quiz-reset-btn:hover {
+  border-color: var(--muted);
+  color: var(--ink);
+  background: rgba(0, 0, 0, 0.03);
+}
+.quiz-reset-btn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+.muted-light-center {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* 3. #preview (wine red): Slow soft gold light drifting across background over ~12s with preview-bg.jpg */
 .dark {
   position: relative;
   overflow: hidden;
   isolation: isolate;
   background:
     radial-gradient(circle at top right, rgba(217, 191, 140, 0.16) 0%, transparent 55%),
-    linear-gradient(135deg, var(--wine) 0%, var(--wine-dark) 100%);
+    linear-gradient(135deg, rgba(122, 46, 53, 0.90) 0%, rgba(94, 34, 41, 0.95) 100%),
+    url('/assets/preview-bg.jpg') center/cover no-repeat;
   color: #F6EDE4;
 }
 
@@ -537,9 +778,20 @@ html.js-anim:not(.reduced-motion) .reveal-item.is-revealed {
   background: var(--card);
   color: var(--ink);
   border-radius: var(--radius);
-  padding: 28px;
+  padding: 0;
+  overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
   transition: transform .3s var(--ease-luxury), box-shadow .3s var(--ease-luxury);
+}
+.gift-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius) var(--radius) 0 0;
+  display: block;
+}
+.gift-content {
+  padding: 28px;
 }
 .gift:hover {
   transform: translateY(-3px);

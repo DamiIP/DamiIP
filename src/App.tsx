@@ -10,6 +10,8 @@ import { Faq } from './components/Faq';
 import { FinalCta } from './components/FinalCta';
 import { Footer } from './components/Footer';
 import { StickyCta } from './components/StickyCta';
+import { WorkspaceBand } from './components/WorkspaceBand';
+import { Quiz } from './components/Quiz';
 import { initAnimations } from './animation';
 
 export const App: React.FC = () => {
@@ -67,8 +69,10 @@ export const App: React.FC = () => {
       <main id="top">
         <Hero heroRef={heroRef} />
         <PainPoints />
+        <WorkspaceBand />
         <About />
         <Method />
+        <Quiz />
         <PreviewClass previewRef={previewRef} />
         <FitCheck />
         <Faq />

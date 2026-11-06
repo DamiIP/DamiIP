@@ -35,7 +35,7 @@ export const PreviewClass: React.FC<PreviewClassProps> = ({ previewRef }) => {
           </ul>
           <a
             className="btn btn-gold"
-            href="https://wa.me/60102131439"
+            href="https://wa.me/60102131439?text=%E4%BD%A0%E5%A5%BD%E9%98%BF%E7%8F%8D%EF%BC%8C%E6%88%91%E6%83%B3%E5%8F%82%E5%8A%A0%E4%B8%8B%E4%B8%80%E5%9C%BA%20Preview%20Class"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -55,24 +55,34 @@ export const PreviewClass: React.FC<PreviewClassProps> = ({ previewRef }) => {
           </p>
         </div>
         <aside id="gift" className="gift">
-          <p className="eyebrow">课后赠礼</p>
-          <h3>老板 IP 起号懒人包</h3>
-          <ol>
-            {giftItems.map((item, idx) => (
-              <li key={idx}>{item}</li>
-            ))}
-          </ol>
-          <p className="small">
-            上完 Preview Class 后，由
-            <a
-              href="https://wa.me/60143174319"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              大米助理
-            </a>
-            发送给你。
-          </p>
+          <img
+            className="gift-img"
+            src="/assets/starter-kit.jpg"
+            alt="老板 IP 起号懒人包"
+            loading="lazy"
+            width={800}
+            height={450}
+          />
+          <div className="gift-content">
+            <p className="eyebrow">课后赠礼</p>
+            <h3>老板 IP 起号懒人包</h3>
+            <ol>
+              {giftItems.map((item, idx) => (
+                <li key={idx}>{item}</li>
+              ))}
+            </ol>
+            <p className="small">
+              上完 Preview Class 后，由
+              <a
+                href="https://wa.me/60143174319?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E4%B8%8A%E5%AE%8C%20Preview%20Class%20%E4%BA%86%EF%BC%8C%E6%83%B3%E9%A2%86%E5%8F%96%E6%87%92%E4%BA%BA%E5%8C%85"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                大米助理
+              </a>
+              发送给你。
+            </p>
+          </div>
         </aside>
       </div>
     </section>

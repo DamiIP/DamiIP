@@ -17,7 +17,7 @@ export const FinalCta: React.FC = () => {
         <p className="small">
           想了解 <b>30 天老板 IP 执行系统</b>？价格与报名请联系{' '}
           <a
-            href="https://wa.me/60143174319"
+            href="https://wa.me/60143174319?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E4%BA%86%E8%A7%A3%2030%20%E5%A4%A9%E8%80%81%E6%9D%BFIP%E6%89%A7%E8%A1%8C%E7%B3%BB%E7%BB%9F"
             target="_blank"
             rel="noopener noreferrer"
           >
