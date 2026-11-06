@@ -64,7 +64,6 @@ export const App: React.FC = () => {
 
   return (
     <>
-      <div id="scroll-progress" className="scroll-progress" aria-hidden="true" />
       <Header />
       <main id="top">
         <Hero heroRef={heroRef} />
