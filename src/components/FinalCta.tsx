@@ -11,8 +11,13 @@ export const FinalCta: React.FC = () => {
           loading="lazy"
         />
         <h2>你的经验，值得被看见。</h2>
-        <a className="btn" href="#preview">
-          免费参加 Preview Class
+        <a
+          className="btn"
+          href="https://wa.me/60102131439?text=%E4%BD%A0%E5%A5%BD%E9%98%BF%E7%8F%8D%EF%BC%8C%E6%88%91%E6%83%B3%E5%8F%82%E5%8A%A0%E4%B8%8B%E4%B8%80%E5%9C%BA%20Preview%20Class"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WhatsApp 报名 Preview Class
         </a>
         <p className="small">
           想了解 <b>30 天老板 IP 执行系统</b>？价格与报名请联系{' '}

@@ -17,15 +17,15 @@ const quizQuestions: Question[] = [
     title: '你现在最大的困扰？',
     options: [
       {
-        text: '肚子里有多年经验与专业，但不知道怎么提炼成个人定位与卖点',
+        text: '有经验，但说不清定位',
         type: '定位卡关',
       },
       {
-        text: '知道要拍什么，但录视频容易卡壳、缺脚本框架、没时间写',
+        text: '想拍，但没脚本、没时间',
         type: '内容卡关',
       },
       {
-        text: '已经拍了挺多视频，但观众只看不问，几乎没有转成私域咨询',
+        text: '有人看，没人问',
         type: '转化卡关',
       },
     ],
@@ -34,15 +34,15 @@ const quizQuestions: Question[] = [
     title: '你拍过多少条视频？',
     options: [
       {
-        text: '还没拍过，或者只零星发过 1-2 条试水',
+        text: '不到 5 条',
         type: '定位卡关',
       },
       {
-        text: '发过 5-20 条，但断断续续，没有建立稳定更新的节奏',
+        text: '5–30 条，断断续续',
         type: '内容卡关',
       },
       {
-        text: '坚持发过 30 条以上，但一直没看到实质的商业回报',
+        text: '30 条以上，没有回报',
         type: '转化卡关',
       },
     ],
@@ -51,15 +51,15 @@ const quizQuestions: Question[] = [
     title: '你每周能投入多少时间？',
     options: [
       {
-        text: '每周只有 1-2 小时碎片时间，希望先厘清精准方向再动手',
+        text: '1–2 小时',
         type: '定位卡关',
       },
       {
-        text: '每周能抽 3-5 小时，希望建立一套不费力的 AI 脚本流程',
+        text: '3–5 小时',
         type: '内容卡关',
       },
       {
-        text: '每周 5 小时以上，已有经验，决心全力跑通获客闭环',
+        text: '5 小时以上',
         type: '转化卡关',
       },
     ],
@@ -69,15 +69,15 @@ const quizQuestions: Question[] = [
 const resultDetails: Record<ResultType, { title: string; desc: string }> = {
   定位卡关: {
     title: '定位卡关',
-    desc: '你的深厚经验就是最大财富，缺的只是把专业翻译成精准定位。\n理清那句核心价值，对的人自然会主动停下脚步。',
+    desc: '你有经验，缺的是一句说清楚的定位。',
   },
   内容卡关: {
     title: '内容卡关',
-    desc: '好想法就在脑海里，缺的是轻松上手的生产闭环与脚本骨架。\n用 AI 帮自己减负，持续输出高价值内容便不再吃力。',
+    desc: '你有想法，缺的是脚本框架和 AI 流程。',
   },
   转化卡关: {
     title: '转化卡关',
-    desc: '内容已经在被看见，缺的是从信任到私域咨询的自然桥梁。\n理顺沟通节奏与交付心法，客户自会放心地主动靠近。',
+    desc: '内容有人看，缺的是从信任到咨询这一步。',
   },
 };
 
@@ -113,24 +113,9 @@ export const Quiz: React.FC = () => {
 
   // Determine top result
   const calculateResult = (): ResultType => {
-    const counts: Record<ResultType, number> = {
-      定位卡关: 0,
-      内容卡关: 0,
-      转化卡关: 0,
-    };
-    answers.forEach((ans) => {
-      if (counts[ans] !== undefined) {
-        counts[ans] += 1;
-      }
-    });
-
-    if (counts['转化卡关'] > counts['定位卡关'] && counts['转化卡关'] > counts['内容卡关']) {
-      return '转化卡关';
-    }
-    if (counts['内容卡关'] > counts['定位卡关']) {
-      return '内容卡关';
-    }
-    return '定位卡关';
+    // Two matching answers win; if all three differ, trust the first question.
+    const repeated = answers.find((ans, i) => answers.indexOf(ans) !== i);
+    return repeated ?? answers[0];
   };
 
   const resultType = isCompleted ? calculateResult() : null;
@@ -151,8 +136,8 @@ export const Quiz: React.FC = () => {
       <div className="wrap narrow">
         <div className="center quiz-header">
           <p className="eyebrow">30 秒小自测</p>
-          <h2>测一测：你的老板IP卡在哪里？</h2>
-          <p className="lead">只需 3 道选择题，看清目前最需要突破的瓶颈。</p>
+          <h2>你的老板 IP 卡在哪？</h2>
+          <p className="lead">3 道题，看清下一步。</p>
         </div>
 
         <div className="quiz-card" aria-live="polite">

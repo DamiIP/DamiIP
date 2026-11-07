@@ -27,12 +27,16 @@ export const PreviewClass: React.FC<PreviewClassProps> = ({ previewRef }) => {
         <div>
           <p className="eyebrow">免费 Preview Class</p>
           <h2>先上一堂，再决定。</h2>
-          <p>看懂方法，再决定适不适合你。</p>
           <ul className="checks">
             {previewBenefits.map((item, idx) => (
               <li key={idx}>{item}</li>
             ))}
           </ul>
+          <ol className="flow" aria-label="怎么开始">
+            <li>WhatsApp 报名</li>
+            <li>上免费 Preview Class</li>
+            <li>领懒人包</li>
+          </ol>
           <a
             className="btn btn-gold"
             href="https://wa.me/60102131439?text=%E4%BD%A0%E5%A5%BD%E9%98%BF%E7%8F%8D%EF%BC%8C%E6%88%91%E6%83%B3%E5%8F%82%E5%8A%A0%E4%B8%8B%E4%B8%80%E5%9C%BA%20Preview%20Class"

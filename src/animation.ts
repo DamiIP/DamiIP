@@ -21,47 +21,6 @@ export function initAnimations() {
   window.addEventListener('scroll', updateProgress, { passive: true });
   updateProgress();
 
-  // 2. Gentle Parallax on hero glow and #story photo (desktop only, disabled for reduced motion)
-  if (!prefersReducedMotion) {
-    let ticking = false;
-    const updateParallax = () => {
-      ticking = false;
-      if (window.innerWidth < 900) return;
-
-      const scrollY = window.scrollY || document.documentElement.scrollTop;
-
-      // Hero glow parallax (moves at 0.9x scroll speed -> +0.1 scroll offset)
-      const heroPhoto = document.querySelector<HTMLElement>('.hero-photo');
-      if (heroPhoto) {
-        const glowOffset = Math.round(scrollY * 0.1);
-        heroPhoto.style.setProperty('--hero-glow-y', `${glowOffset}px`);
-      }
-
-      // #story photo parallax
-      const storySection = document.getElementById('story');
-      const storyPhoto = document.querySelector<HTMLElement>('#story .split-photo');
-      if (storySection && storyPhoto) {
-        const rect = storySection.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          const relativeScroll = (window.innerHeight - rect.top) * 0.1;
-          storyPhoto.style.setProperty('--story-photo-y', `${Math.round(relativeScroll)}px`);
-        }
-      }
-    };
-
-    window.addEventListener(
-      'scroll',
-      () => {
-        if (!ticking) {
-          requestAnimationFrame(updateParallax);
-          ticking = true;
-        }
-      },
-      { passive: true }
-    );
-    updateParallax();
-  }
-
   // STRICT SAFETY RULE:
   // If reduced motion is requested or IntersectionObserver is missing, do not animate scroll reveals.
   if (prefersReducedMotion || !hasIntersectionObserver) {

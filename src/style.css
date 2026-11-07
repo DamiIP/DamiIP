@@ -141,33 +141,10 @@ h1 em {
   box-shadow: 0 4px 14px rgba(122, 46, 53, .16);
   transition: background .25s ease, transform .25s var(--ease-luxury), box-shadow .25s var(--ease-luxury);
 }
-.btn::after {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -80%;
-  width: 45%;
-  height: 200%;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.28) 50%,
-    transparent 100%
-  );
-  transform: rotate(25deg);
-  pointer-events: none;
-  opacity: 0;
-  transition: none;
-}
 .btn:hover {
   background: var(--wine-dark);
   transform: translateY(-2px);
   box-shadow: 0 8px 22px rgba(122, 46, 53, .32);
-}
-.btn:hover::after {
-  opacity: 1;
-  left: 140%;
-  transition: left 0.75s ease-out, opacity 0.75s ease-out;
 }
 .btn:active {
   transform: translateY(0);
@@ -176,51 +153,14 @@ h1 em {
 .btn:focus-visible, a:focus-visible, summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 .btn-small { min-height: 40px; padding: 0 18px; font-size: 14px; }
 
-/* 4. WhatsApp button: small shine sweep every 4 seconds to draw the eye */
 .btn-gold {
   background: var(--gold-light);
   color: var(--wine-dark);
-  margin-top: 28px;
+  margin-top: 20px;
   box-shadow: 0 4px 14px rgba(169, 132, 74, .2);
   position: relative;
   overflow: hidden;
 }
-.btn-gold::after {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -80%;
-  width: 45%;
-  height: 200%;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.42) 50%,
-    transparent 100%
-  );
-  transform: rotate(25deg);
-  pointer-events: none;
-  animation: sweepGoldShine 4s var(--ease-luxury) infinite;
-}
-
-@keyframes sweepGoldShine {
-  0%, 65% {
-    left: -80%;
-    opacity: 0;
-  }
-  70% {
-    opacity: 1;
-  }
-  85% {
-    left: 140%;
-    opacity: 1;
-  }
-  86%, 100% {
-    left: 140%;
-    opacity: 0;
-  }
-}
-
 .btn-gold:hover {
   background: #E6D2A8;
   transform: translateY(-2px);
@@ -274,7 +214,7 @@ h1 em {
 }
 .hero .lead {
   opacity: 0;
-  animation: heroFadeUp 0.6s var(--ease-luxury) 0.42s forwards;
+  animation: heroFadeUp 0.5s var(--ease-luxury) 0.3s forwards;
 }
 .hero-actions {
   display: flex;
@@ -283,14 +223,14 @@ h1 em {
   gap: 14px 24px;
   margin-top: 28px;
   opacity: 0;
-  animation: heroFadeUp 0.6s var(--ease-luxury) 0.68s forwards;
+  animation: heroFadeUp 0.5s var(--ease-luxury) 0.38s forwards;
 }
 .tags {
   margin-top: 18px;
   font-size: 14px;
   color: var(--muted);
   opacity: 0;
-  animation: heroFadeUp 0.6s var(--ease-luxury) 0.8s forwards;
+  animation: heroFadeUp 0.5s var(--ease-luxury) 0.46s forwards;
 }
 
 @keyframes heroFadeUp {
@@ -304,7 +244,7 @@ h1 em {
   }
 }
 
-/* 2. Hero Portrait & Parallax Glow (moves at 0.9x scroll speed on desktop) */
+/* Hero portrait */
 .hero-photo {
   position: relative;
   max-width: 420px;
@@ -326,8 +266,6 @@ h1 em {
   filter: blur(32px);
   z-index: -1;
   pointer-events: none;
-  transform: translateY(var(--hero-glow-y, 0px));
-  will-change: transform;
 }
 .hero-photo img {
   position: relative;
@@ -339,34 +277,6 @@ h1 em {
   object-position: top;
   border-radius: 200px 200px var(--radius) var(--radius);
   box-shadow: 0 12px 36px rgba(58, 48, 46, .08);
-  opacity: 0;
-  transform: scale(1.06);
-  filter: blur(8px);
-  animation: heroPortraitIn 0.85s var(--ease-luxury) 0.18s forwards;
-}
-
-@keyframes heroPortraitIn {
-  from {
-    opacity: 0;
-    transform: scale(1.06);
-    filter: blur(8px);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-    filter: blur(0);
-  }
-}
-
-/* Hero portrait desktop hover */
-@media (hover: hover) and (min-width: 900px) {
-  .hero-photo img {
-    transition: transform 1.2s var(--ease-luxury), box-shadow 1.2s var(--ease-luxury);
-  }
-  .hero-photo:hover img {
-    transform: scale(1.03);
-    box-shadow: 0 16px 44px rgba(58, 48, 46, .12);
-  }
 }
 
 .hero-photo figcaption {
@@ -450,34 +360,6 @@ html.js-anim:not(.reduced-motion) .reveal-item.is-revealed {
 }
 .card p { color: var(--muted); margin-top: 6px; }
 
-/* Workspace Image Band (between pain cards and #story) */
-.workspace-band-section {
-  padding: 8px 0 24px;
-}
-.workspace-band {
-  margin: 0;
-  width: 100%;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(58, 48, 46, .05);
-  border: 1px solid var(--line);
-  background: var(--card);
-}
-.workspace-band img {
-  width: 100%;
-  height: clamp(140px, 22vw, 240px);
-  object-fit: cover;
-  object-position: center 48%;
-  display: block;
-  transition: transform 0.6s var(--ease-luxury);
-}
-@media (hover: hover) {
-  .workspace-band:hover img {
-    transform: scale(1.02);
-  }
-}
-
-/* 2. #story Photo Parallax (desktop only) */
 .split { display: grid; gap: 36px; align-items: center; }
 .split-photo {
   width: 100%;
@@ -487,8 +369,6 @@ html.js-anim:not(.reduced-motion) .reveal-item.is-revealed {
   border-radius: var(--radius);
   margin-inline: auto;
   box-shadow: 0 10px 30px rgba(58, 48, 46, .06);
-  transform: translateY(var(--story-photo-y, 0px));
-  will-change: transform;
 }
 .split p { color: var(--muted); }
 
@@ -579,7 +459,7 @@ html.js-anim:not(.reduced-motion) .reveal-item.is-revealed {
 }
 .quiz-option-btn {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 14px;
   width: 100%;
   padding: 15px 16px;
@@ -620,7 +500,6 @@ html.js-anim:not(.reduced-motion) .reveal-item.is-revealed {
   color: var(--wine);
   font-weight: 600;
   font-size: 13px;
-  margin-top: 1px;
   transition: background 0.2s ease, color 0.2s ease;
 }
 .quiz-option-btn:hover .quiz-option-letter {
@@ -721,7 +600,7 @@ html.js-anim:not(.reduced-motion) .reveal-item.is-revealed {
   color: var(--muted);
 }
 
-/* 3. #preview (wine red): Slow soft gold light drifting across background over ~12s with preview-bg.jpg */
+/* #preview (wine red) */
 .dark {
   position: relative;
   overflow: hidden;
@@ -731,36 +610,6 @@ html.js-anim:not(.reduced-motion) .reveal-item.is-revealed {
     linear-gradient(135deg, rgba(122, 46, 53, 0.90) 0%, rgba(94, 34, 41, 0.95) 100%),
     url('/assets/preview-bg.jpg') center/cover no-repeat;
   color: #F6EDE4;
-}
-
-.dark::before {
-  content: "";
-  position: absolute;
-  top: -30%;
-  left: -30%;
-  width: 160%;
-  height: 160%;
-  background: radial-gradient(
-    ellipse 50% 45% at 30% 35%,
-    rgba(217, 191, 140, 0.18) 0%,
-    rgba(217, 191, 140, 0.06) 45%,
-    transparent 70%
-  );
-  pointer-events: none;
-  z-index: 0;
-  animation: driftGoldLight 12s ease-in-out infinite alternate;
-}
-
-@keyframes driftGoldLight {
-  0% {
-    transform: translate3d(-10%, -8%, 0) scale(1);
-  }
-  50% {
-    transform: translate3d(14%, 12%, 0) scale(1.08);
-  }
-  100% {
-    transform: translate3d(-4%, 20%, 0) scale(0.95);
-  }
 }
 
 .dark .wrap {
@@ -774,6 +623,9 @@ html.js-anim:not(.reduced-motion) .reveal-item.is-revealed {
 .checks { margin-top: 20px; display: grid; gap: 8px; }
 .checks li { padding-left: 28px; position: relative; }
 .checks li::before { content: ""; position: absolute; left: 2px; top: 9px; width: 14px; height: 8px; border-left: 2px solid var(--gold-light); border-bottom: 2px solid var(--gold-light); transform: rotate(-45deg); }
+.flow { counter-reset: f; display: grid; gap: 6px; margin-top: 24px; padding-top: 18px; border-top: 1px solid rgba(217, 191, 140, .3); font-size: 15px; }
+.flow li { counter-increment: f; display: flex; align-items: center; gap: 10px; }
+.flow li::before { content: counter(f); flex: none; width: 22px; height: 22px; border-radius: 50%; background: var(--gold-light); color: var(--wine-dark); font-size: 12px; font-weight: 600; line-height: 22px; text-align: center; }
 .dark .muted-light { color: #D8C4BA; }
 .gift {
   background: var(--card);
@@ -786,13 +638,14 @@ html.js-anim:not(.reduced-motion) .reveal-item.is-revealed {
 }
 .gift-img {
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: var(--radius) var(--radius) 0 0;
   display: block;
 }
 .gift-content {
-  padding: 28px;
+  padding: 22px 24px 24px;
 }
 .gift:hover {
   transform: translateY(-3px);
@@ -800,7 +653,7 @@ html.js-anim:not(.reduced-motion) .reveal-item.is-revealed {
 }
 .gift h3 { font-size: 22px; margin-bottom: 14px; }
 .dark .gift .eyebrow { color: var(--gold); }
-.gift ol { counter-reset: g; display: grid; gap: 8px; }
+.gift ol { counter-reset: g; display: grid; gap: 4px; }
 .gift li { counter-increment: g; display: flex; gap: 12px; }
 .gift li::before { content: counter(g); flex: none; width: 24px; height: 24px; margin-top: 3px; border-radius: 50%; background: var(--soft-top); color: var(--wine); font-size: 13px; line-height: 24px; text-align: center; }
 .dark .gift .small { color: var(--muted); }
@@ -911,16 +764,24 @@ html.js-anim:not(.reduced-motion) .reveal-item.is-revealed {
     filter: none !important;
     background-size: 100% 100% !important;
   }
-  .hero-photo::before,
-  .split-photo {
-    transform: none !important;
-  }
-  .dark::before {
-    animation: none !important;
-  }
-  .btn-gold::after {
-    animation: none !important;
-  }
+}
+
+/* Phone: shorter page */
+@media (max-width: 719px) {
+  .section { padding: 48px 0; }
+  .quiz-section { padding: 48px 0; }
+  .hero { padding: 28px 0 36px; }
+  .hero-grid { gap: 24px; }
+  .hero-photo { max-width: 300px; }
+  .stats { margin-top: 28px; }
+  .stats li { padding: 14px 6px; }
+  .cards { margin-top: 20px; gap: 10px; }
+  .card { padding: 16px 18px; }
+  .note { margin-top: 20px; }
+  .split { gap: 24px; }
+  .split-photo { aspect-ratio: 4 / 3; object-position: center 15%; }
+  .steps { margin-top: 20px; gap: 8px; }
+  .steps li { padding: 12px 16px; }
 }
 
 /* Tablet & desktop */
